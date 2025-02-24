@@ -1,0 +1,5 @@
+fasapi
+soundfile
+funasr
+funasr_onnx
+aiohttp
