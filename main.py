@@ -6,12 +6,11 @@ from fastapi import FastAPI
 import asyncio
 import uvicorn
 import aiohttp
-from concurrent.futures import ThreadPoolExecutor
 from utils.logger import logger
 from utils.config import *
 from utils.data_manager import MainRequest
-from utils.utils import download_audio_from_url,split_stereo_to_mono,merge_and_sort_timestamps,audio_segments
-from utils.server import request_vad,request_asr,request_punc
+from utils.utils import download_audio_from_url,split_stereo_to_mono,merge_and_sort_timestamps,audio_segments,convert_mp3_to_wav
+from utils.server import request_vad,request_punc
 from utils.SeacoParaformer import SeacoParaformer
 logger.info(f"raw audio dir is {raw_audio_dir}")
 logger.info(f"segment audio dir is {segment_audio_dir}")
@@ -29,10 +28,10 @@ if not os.path.exists(asr_model_path):
     model_dir = snapshot_download('iic/speech_seaco_paraformer_large_asr_nat-zh-cn-16k-common-vocab8404-pytorch',cache_dir="ckpt")
 
 
-asr_model = SeacoParaformer(asr_model_path)
+asr_model = SeacoParaformer(asr_model_path,quantize=True,intra_op_num_threads=8)
 
 app = FastAPI()
-batch_size = 16
+
 @app.post("/predict")
 async def predict(request:MainRequest):
     sessionId = request.sessionId
@@ -48,9 +47,15 @@ async def predict(request:MainRequest):
             tasks = download_audio_from_url(session, audio_file_url, raw_audio_dir)
             result = await asyncio.gather(tasks)
             logger.info(f"sessionId:{sessionId}, 下载音频文件完成，耗时：{time.time() - start_time}")
-
+        download_finish_time = time.time()
         if result[0][1]:
             audio_file_path = result[0][0]
+            if audio_file_path.endswith(".mp3"):
+                convert_result = convert_mp3_to_wav(audio_file_path, audio_file_path.replace(".mp3", ".wav"))
+                if convert_result:
+                    os.remove(audio_file_path)
+                    audio_file_path = audio_file_path.replace(".mp3", ".wav")
+
             audio_file_name = os.path.basename(audio_file_path)
 
             logger.info(f"sessionId:{sessionId}, 开始切分音频文件：{audio_file_name}")
@@ -87,12 +92,9 @@ async def predict(request:MainRequest):
                 logger.info(f"开始调用ASR服务进行推理...")
                 try:
                     asr_start_time = time.time()
-                    # for index in range(0,len(asr_input),batch_size):
-                    #     batch_input = asr_input[index:index+batch_size]
-                    #     batch_asr_text = asr_model(batch_input, hotword)
-                    #     asr_text.extend(batch_asr_text)
                     asr_text = asr_model(asr_input, hotword)
-                    logger.info(f"asr time is {time.time() - asr_start_time}")
+                    asr_time = time.time() - asr_start_time
+                    logger.info(f"asr time is {asr_time}")
                     logger.info(f"sessionId is {sessionId}, asr response is {asr_text}")
                 except:
                     logger.error({"sessionId": sessionId, "response": "asr识别发生错误", "code": 500, "cost": time.time() - start_time})
@@ -102,26 +104,26 @@ async def predict(request:MainRequest):
 
                 for i,elem in enumerate(asr_text):
                     raw_text = elem["preds"].replace(" ","")
-                    punc_result = request_punc({"sessionId": sessionId, "raw_text": raw_text})
-                    if punc_result["code"] != 200:
-                        punc_result = ""
+                    if raw_text:
+                        punc_result = request_punc({"sessionId": sessionId, "raw_text": raw_text})
+                        if punc_result["code"] != 200:
+                            punc_result = ""
+                        else:
+                            punc_result = punc_result["response"]
                     else:
-                        punc_result = punc_result["response"]
-
+                        continue
                     cur_role = segments[i]["spk"]
-
                     asr_final_result.append({"index": i, "speaker": cur_role,"text":punc_result})
                 logger.info(f"punc time is {time.time() - punc_start_time}")
             else:
                 logger.error({"sessionId": sessionId, "response": "切分音频文件失败", "code": 500, "cost": time.time() - start_time})
                 return {"sessionId": sessionId, "response": "切分音频文件失败", "code": 500, "cost": time.time() - start_time}
 
-            return {"sessionId": sessionId, "response": asr_final_result, "code": 500, "cost": time.time() - start_time}
+            return {"sessionId": sessionId, "response": asr_final_result, "code": 200, "all cost time": time.time() - start_time,"download audio time":download_finish_time - start_time,"asr time":asr_time}
 
         else:
             logger.error({"sessionId": sessionId, "response": "下载音频文件失败", "code": 500, "cost": time.time() - start_time})
             return {"sessionId": sessionId, "response": "下载音频文件失败", "code": 500, "cost": time.time() - start_time}
-
 
     except:
         error = traceback.format_exc()
@@ -130,5 +132,5 @@ async def predict(request:MainRequest):
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host="0.0.0.0", port=18022)
+    uvicorn.run(app, host="0.0.0.0", port=18003)
 

@@ -7,7 +7,7 @@ import requests
 
 
 def request_vad(input_data):
-    url = "http://0.0.0.0:3021/vad"
+    url = "http://0.0.0.0:3011/vad"
     headers = {"Content-Type": "application/json"}
     response = requests.post(url=url,json=input_data,headers=headers)
     response_data = response.json()
@@ -21,7 +21,7 @@ def request_asr(input_data):
     return response_data
 
 def request_punc(input_data):
-    url = "http://0.0.0.0:3023/punc"
+    url = "http://0.0.0.0:3013/punc"
     headers = {"Content-Type": "application/json"}
     response = requests.post(url=url,json=input_data,headers=headers)
     response_data = response.json()

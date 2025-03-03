@@ -29,7 +29,7 @@ async def download_audio_from_url(session,audio_url,raw_audio_dir,max_retries=3)
                     # 将音频文件保存到本地
                     with open(f"{raw_audio_dir}/{filename}", "wb") as f:
                         f.write(await response.read())
-                    return f"{raw_audio_dir}/{filename}",True
+                        return f"{raw_audio_dir}/{filename}",True
         except asyncio.TimeoutError:
             attempt += 1
         except aiohttp.ClientError as e:
@@ -37,6 +37,26 @@ async def download_audio_from_url(session,audio_url,raw_audio_dir,max_retries=3)
             return None, False
     logger.error(f"Error downloading audio from {audio_url}")
     return None, False
+
+
+def convert_mp3_to_wav(mp3_file_path, wav_file_path, samplerate=16000):
+    """
+    将mp3文件转换为wav文件
+
+    :param mp3_file_path: 输入的mp3文件路径
+    :param wav_file_path: 输出的wav文件路径
+    :param samplerate: 采样率，默认为16000
+    :return: 转换成功返回True，失败返回False
+    """
+    try:
+        # 读取mp3文件
+        data, _ = sf.read(mp3_file_path)
+        # 保存为wav文件
+        sf.write(wav_file_path, data, samplerate)
+        return True
+    except Exception as e:
+        logger.error(f"Error converting mp3 to wav: {e}")
+        return False
 
 
 def split_stereo_to_mono(input_file, left_audio_file_name, right_audio_file_name):
@@ -116,3 +136,6 @@ def audio_segments(left_wav_path,right_wav_path,merged_time_stamp):
     if os.path.exists(right_wav_path):
         os.remove(right_wav_path)
     return segments
+
+if __name__ == '__main__':
+    audio_file_path = ""

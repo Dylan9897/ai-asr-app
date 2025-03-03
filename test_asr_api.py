@@ -1,18 +1,24 @@
 import requests
-url = "http://0.0.0.0:18022/predict"
+import pandas as pd
 
-mp3_audio_file_url = "http://221.6.195.22:8092/recordings/2025-02-06/2025-02-06-15-26-43-7589_8230_018052676818.mp3"
+audio_address_file_path = 'audio_address.xlsx'
+url = "http://192.168.1.101:18011/predict"
 
-long_audio_file_url = 'http://221.6.195.22:19080/recordings/2025-02-06/2025-02-06-15-21-26-6628_5502_015627699350.wav'
+
 headers = {
     "Content-Type": "application/json",
 }
 
-data = {
-    "sessionId":"123",
-    "audio_file_url": long_audio_file_url,
-    "hotword": "",
+
+data_frame = pd.read_excel(audio_address_file_path,sheet_name='Sheet2')
+
+audio_file_url_list = data_frame.iloc[:,0].to_list()
+
+for audio_url in audio_file_url_list:
+    data = {
+        "sessionId":"123",
+        "audio_file_url": audio_url,
+        "hotword": "",
 }
-for i in range(10):
     response = requests.post(url=url, json=data, headers=headers)
     print(response.json())
