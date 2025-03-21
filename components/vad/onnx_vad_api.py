@@ -9,11 +9,13 @@ from funasr_onnx import Fsmn_vad
 import uvicorn
 import os
 import time
+from dotenv import load_dotenv
 import sys
 sys.path.append("/mnt/e/Github/ai-asr-app")
 from utils.logger import logger
 from utils.data_manager import VadRequest,VadResponseModel
-from utils.config import vad_model_path
+load_dotenv()
+vad_model_path = os.getenv("vad_model_path")
 
 namespace = ""
 # 加载环境变量

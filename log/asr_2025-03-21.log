@@ -175,3 +175,18 @@ NameError: name 'download_finish_time' is not defined
 2025-03-21 07:34:55 | INFO | asr time is 5.393846750259399
 2025-03-21 07:34:55 | INFO | 开始调用标点预测服务...
 2025-03-21 07:34:55 | INFO | punc time is 0.25599098205566406
+2025-03-21 16:15:57 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 16:15:57 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 16:15:57 | INFO | 模型不存在，开始下载模型...
+2025-03-21 16:58:12 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 16:58:12 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 16:58:39 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 16:58:39 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 17:01:48 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 17:01:48 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 17:05:21 | INFO | 模型不存在，开始下载模型...
+2025-03-21 17:06:48 | INFO | 模型不存在，开始下载模型...
+2025-03-21 17:07:45 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 17:07:45 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 17:07:45 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 17:07:45 | INFO | segment audio dir is cache/segment_audio_dir

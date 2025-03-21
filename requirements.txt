@@ -1,5 +1,11 @@
-fasapi
+fastapi
 soundfile
 funasr
+uvicorn
 funasr_onnx
 aiohttp
+loguru
+dotenv
+gunicorn
+#torch>=2.4.0
+#torchaudio
