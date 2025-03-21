@@ -95,7 +95,7 @@ async def predict(request:MainRequest):
                     asr_text = asr_model(asr_input, hotword)
                     asr_time = time.time() - asr_start_time
                     logger.info(f"asr time is {asr_time}")
-                    logger.info(f"sessionId is {sessionId}, asr response is {asr_text}")
+                    #logger.info(f"sessionId is {sessionId}, asr response is {asr_text}")
                 except:
                     logger.error({"sessionId": sessionId, "response": "asr识别发生错误", "code": 500, "cost": time.time() - start_time})
                     return {"sessionId": sessionId, "response": "asr识别发生错误", "code": 500, "cost": time.time() - start_time}

@@ -35,10 +35,8 @@ async def predict(request: PuncRequest):
     start = time.time()
     sessionId = request.sessionId
     raw_text = request.raw_text
-    logger.info(f"sessionId:{sessionId},raw_text:{raw_text}")
     try:
         result = punc_model(raw_text)
-        logger.info(f"sessionId:{sessionId},raw_text:{raw_text},result:{result}")
         return PuncResponseModel(sessionId=sessionId,code=200,response=result[0],cost=time.time()-start)
     except:
         error = traceback.format_exc()

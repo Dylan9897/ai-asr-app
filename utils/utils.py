@@ -22,11 +22,10 @@ async def download_audio_from_url(session,audio_url,raw_audio_dir,max_retries=3)
     attempt = 0
     while attempt < max_retries:
         try:
-            async with session.get(audio_url,timeout=aiohttp.ClientTimeout(total=60)) as response:
+            async with session.get(audio_url,timeout=aiohttp.ClientTimeout(total=500)) as response:
                 if response.status == 200:
                     parsed_url = urlparse(audio_url)
                     filename = os.path.basename(unquote(parsed_url.path))
-                    # 将音频文件保存到本地
                     with open(f"{raw_audio_dir}/{filename}", "wb") as f:
                         f.write(await response.read())
                         return f"{raw_audio_dir}/{filename}",True
@@ -138,4 +137,5 @@ def audio_segments(left_wav_path,right_wav_path,merged_time_stamp):
     return segments
 
 if __name__ == '__main__':
-    audio_file_path = ""
+    audio_file_path = "http://106.15.137.87:81/recordings/2025-02-11/2025-02-11-17-14-50-6735_89727869.mp3"
+    download_audio_from_url(session='123', audio_url=audio_file_path, raw_audio_dir="./raw_audio")

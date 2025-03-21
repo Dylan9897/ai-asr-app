@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 
 audio_address_file_path = 'audio_address.xlsx'
-url = "http://192.168.1.101:18011/predict"
+url = "http://192.168.1.101:18003/predict"
 
 
 headers = {
@@ -22,3 +22,4 @@ for audio_url in audio_file_url_list:
 }
     response = requests.post(url=url, json=data, headers=headers)
     print(response.json())
+    input()

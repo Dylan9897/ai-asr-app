@@ -45,7 +45,6 @@ async def vad(request: VadRequest):
         return VadResponseModel(sessionId=sessionId,code=500,response="mono_channel_audio_path is empty",cost=time.time()-start)
     try:
         vad_result = vad_model(mono_channel_audio_path)
-        logger.info(f"sessionId: {sessionId},VAD result: {vad_result}")
         return VadResponseModel(sessionId=sessionId,code=200,response=vad_result,cost=time.time()-start)
     except Exception as error:
         logger.error(f"sessionId: {sessionId},Error processing VAD: {str(error)}")

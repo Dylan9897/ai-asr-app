@@ -1,0 +1,177 @@
+2025-03-21 06:59:33 | INFO | sessionId:1233,audio_file_url:http://106.15.137.87:81/recordings/2025-02-07/2025-02-07-17-03-55-9517_89727871.mp3,hotword:
+2025-03-21 06:59:33 | INFO | sessionId is 1233, start downloading file:http://106.15.137.87:81/recordings/2025-02-07/2025-02-07-17-03-55-9517_89727871.mp3
+2025-03-21 06:59:33 | INFO | sessionId:1233, 下载音频文件完成，耗时：0.0815579891204834
+2025-03-21 06:59:34 | INFO | sessionId:1233, 开始切分音频文件：2025-02-07-17-03-55-9517_89727871.wav
+2025-03-21 06:59:34 | INFO | sessionId:1233, 左声道文件名：2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 06:59:34 | INFO | sessionId:1233, 右声道文件名：2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 06:59:34 | INFO | sessionId:1233, 左声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 06:59:34 | INFO | sessionId:1233, 右声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 06:59:34 | INFO | sessionId: 1233, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 06:59:35 | INFO | vad time is 0.8481979370117188
+2025-03-21 06:59:35 | INFO | 开始调用ASR服务进行推理...
+2025-03-21 06:59:40 | INFO | asr time is 5.276380300521851
+2025-03-21 06:59:40 | INFO | 开始调用标点预测服务...
+2025-03-21 06:59:40 | INFO | punc time is 0.19472694396972656
+2025-03-21 07:13:46 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:13:46 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:13:46 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:13:46 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:13:46 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:13:46 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:13:46 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:13:46 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:13:46 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:13:46 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:15:13 | INFO | sessionId:1233,audio_file_url:http://106.15.137.87:81/recordings/2025-02-07/2025-02-07-17-03-55-9517_89727871.mp3,hotword:
+2025-03-21 07:15:13 | INFO | sessionId is 1233, start downloading file:http://106.15.137.87:81/recordings/2025-02-07/2025-02-07-17-03-55-9517_89727871.mp3
+2025-03-21 07:15:13 | INFO | sessionId:1233, 下载音频文件完成，耗时：0.0913388729095459
+2025-03-21 07:15:13 | INFO | sessionId:1233, 开始切分音频文件：2025-02-07-17-03-55-9517_89727871.wav
+2025-03-21 07:15:13 | INFO | sessionId:1233, 左声道文件名：2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:15:13 | INFO | sessionId:1233, 右声道文件名：2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:15:13 | INFO | sessionId:1233, 左声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:15:13 | INFO | sessionId: 1233, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:15:24 | INFO | sessionId:1233, 右声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:15:24 | INFO | sessionId: 1233, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:15:26 | INFO | vad time is 12.889060258865356
+2025-03-21 07:15:28 | INFO | 开始调用ASR服务进行推理...
+2025-03-21 07:15:33 | INFO | asr time is 5.1495397090911865
+2025-03-21 07:15:33 | INFO | 开始调用标点预测服务...
+2025-03-21 07:15:33 | INFO | punc time is 0.24167084693908691
+2025-03-21 07:23:19 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:23:19 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:23:19 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:23:19 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:23:19 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:23:19 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:23:19 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:23:19 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:23:19 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:23:19 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:00 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:00 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:00 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:00 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:00 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:00 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:00 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:00 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:00 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:00 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:51 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:51 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:51 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:51 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:51 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:51 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:51 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:51 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:24:51 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:24:51 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:25:27 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:25:27 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:25:27 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:25:27 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:25:27 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:25:27 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:25:27 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:25:27 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:25:27 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:25:27 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:28:30 | INFO | sessionId:123,audio_file_url:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'})),hotword:""
+2025-03-21 07:28:30 | INFO | sessionId is 123, start loading file:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'}))
+2025-03-21 07:28:30 | INFO | Error, sessionId is 123, error is Traceback (most recent call last):
+  File "/home/root123/workspace/lwl/workspace/api.py", line 51, in predict
+    if audio_file_path.endswith(".mp3"):
+UnboundLocalError: local variable 'audio_file_path' referenced before assignment
+
+2025-03-21 07:29:13 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:29:13 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:29:13 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:29:13 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:29:13 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:29:13 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:29:13 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:29:13 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:29:13 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:29:13 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:29:22 | INFO | sessionId:123,audio_file_url:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'})),hotword:""
+2025-03-21 07:29:22 | INFO | sessionId is 123, start loading file:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'}))
+2025-03-21 07:29:22 | INFO | sessionId:123, 开始切分音频文件：2025-02-07-17-03-55-9517_89727871.wav
+2025-03-21 07:29:22 | INFO | sessionId:123, 左声道文件名：2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:29:22 | INFO | sessionId:123, 右声道文件名：2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:29:22 | INFO | sessionId:123, 左声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:29:22 | INFO | sessionId: 123, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:29:24 | INFO | sessionId:123, 右声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:29:24 | INFO | sessionId: 123, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:29:26 | INFO | vad time is 4.304610252380371
+2025-03-21 07:29:28 | INFO | 开始调用ASR服务进行推理...
+2025-03-21 07:29:34 | INFO | asr time is 5.643032550811768
+2025-03-21 07:29:34 | INFO | 开始调用标点预测服务...
+2025-03-21 07:29:34 | INFO | punc time is 0.16498160362243652
+2025-03-21 07:29:34 | INFO | Error, sessionId is 123, error is Traceback (most recent call last):
+  File "/home/root123/workspace/lwl/workspace/api.py", line 121, in predict
+    return {"sessionId": sessionId, "response": asr_final_result, "code": 200, "all cost time": time.time() - start_time,"download audio time":download_finish_time - start_time,"asr time":asr_time}
+NameError: name 'download_finish_time' is not defined
+
+2025-03-21 07:30:07 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:30:07 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:30:07 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:30:07 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:30:07 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:30:07 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:30:07 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:30:07 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:30:07 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:30:07 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:30:14 | INFO | sessionId:123,audio_file_url:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'})),hotword:""
+2025-03-21 07:30:14 | INFO | sessionId is 123, start loading file:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'}))
+2025-03-21 07:30:15 | INFO | sessionId:123, 开始切分音频文件：2025-02-07-17-03-55-9517_89727871.wav
+2025-03-21 07:30:15 | INFO | sessionId:123, 左声道文件名：2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:30:15 | INFO | sessionId:123, 右声道文件名：2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:30:15 | INFO | sessionId:123, 左声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:30:15 | INFO | sessionId: 123, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:30:17 | INFO | sessionId:123, 右声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:30:17 | INFO | sessionId: 123, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:30:17 | INFO | vad time is 2.567958116531372
+2025-03-21 07:30:19 | INFO | 开始调用ASR服务进行推理...
+2025-03-21 07:30:25 | INFO | asr time is 5.451306581497192
+2025-03-21 07:30:25 | INFO | 开始调用标点预测服务...
+2025-03-21 07:30:25 | INFO | punc time is 0.24137330055236816
+2025-03-21 07:31:11 | INFO | sessionId:123,audio_file_url:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'})),hotword:""
+2025-03-21 07:31:11 | INFO | sessionId is 123, start loading file:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'}))
+2025-03-21 07:31:12 | INFO | sessionId:123, 开始切分音频文件：2025-02-07-17-03-55-9517_89727871.wav
+2025-03-21 07:31:12 | INFO | sessionId:123, 左声道文件名：2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:31:12 | INFO | sessionId:123, 右声道文件名：2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:31:12 | INFO | sessionId:123, 左声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:31:12 | INFO | sessionId: 123, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:31:14 | INFO | sessionId:123, 右声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:31:14 | INFO | sessionId: 123, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:31:16 | INFO | vad time is 4.156907320022583
+2025-03-21 07:31:18 | INFO | 开始调用ASR服务进行推理...
+2025-03-21 07:31:23 | INFO | asr time is 5.3613269329071045
+2025-03-21 07:31:23 | INFO | 开始调用标点预测服务...
+2025-03-21 07:31:23 | INFO | punc time is 0.22066783905029297
+2025-03-21 07:34:20 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:34:20 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:34:21 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:34:21 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:34:21 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:34:21 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:34:21 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:34:21 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:34:21 | INFO | raw audio dir is cache/raw_audio_dir
+2025-03-21 07:34:21 | INFO | segment audio dir is cache/segment_audio_dir
+2025-03-21 07:34:43 | INFO | sessionId:123,audio_file_url:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'})),hotword:""
+2025-03-21 07:34:43 | INFO | sessionId is 123, start loading file:UploadFile(filename='2025-02-07-17-03-55-9517_89727871.mp3', size=497664, headers=Headers({'content-disposition': 'form-data; name="audio_file"; filename="2025-02-07-17-03-55-9517_89727871.mp3"', 'content-type': 'audio/mpeg'}))
+2025-03-21 07:34:43 | INFO | sessionId:123, 开始切分音频文件：2025-02-07-17-03-55-9517_89727871.wav
+2025-03-21 07:34:43 | INFO | sessionId:123, 左声道文件名：2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:34:43 | INFO | sessionId:123, 右声道文件名：2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:34:43 | INFO | sessionId:123, 左声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:34:43 | INFO | sessionId: 123, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_left.wav
+2025-03-21 07:34:46 | INFO | sessionId:123, 右声道文件地址：cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:34:46 | INFO | sessionId: 123, mono_channel_audio_path: cache/segment_audio_dir/2025-02-07-17-03-55-9517_89727871_right.wav
+2025-03-21 07:34:48 | INFO | vad time is 4.362705945968628
+2025-03-21 07:34:49 | INFO | 开始调用ASR服务进行推理...
+2025-03-21 07:34:55 | INFO | asr time is 5.393846750259399
+2025-03-21 07:34:55 | INFO | 开始调用标点预测服务...
+2025-03-21 07:34:55 | INFO | punc time is 0.25599098205566406
