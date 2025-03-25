@@ -136,6 +136,21 @@ def audio_segments(left_wav_path,right_wav_path,merged_time_stamp):
         os.remove(right_wav_path)
     return segments
 
+def audio_segments_alone(wav_path,merged_time_stamp):
+    """
+    按时间戳读取音频文件
+    :param merged_time_stamp:
+    :return:
+    """
+    segments = []
+    for index,item in enumerate(merged_time_stamp):
+        start, end, spker = item
+        segment = load_wav(wav_path,start,end)
+        segments.append({"spk":"speaker_1", "audio": segment, "start": start, "end": end})
+    return segments
+
+
+
 if __name__ == '__main__':
     audio_file_path = "http://106.15.137.87:81/recordings/2025-02-11/2025-02-11-17-14-50-6735_89727869.mp3"
     download_audio_from_url(session='123', audio_url=audio_file_path, raw_audio_dir="./raw_audio")
